@@ -47,7 +47,7 @@ while (true) {
 ## `namespace myasync`
 - `void Async::set_function(std::function<T*()>)` Set the function to be ran asynchronously
 - `bool Async::try_start()` Returns false if it was already running and couldn't start
-- `T* Async::get_data()` (Requires lock/unlock functions) Returns a pointer to the return value
+- `T* Async::get_data()` (Requires lock/unlock functions) Returns a pointer to the return value, or nullptr if no data available
 - `void Async::reset_data()` (Requires lock/unlock functions) Essentially resets the output of `Async::get_data()` to nullptr
 - `bool Async::is_running()` Returns true if it is already running because of `Async::try_start()`
 
